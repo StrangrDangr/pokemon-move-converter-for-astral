@@ -25,7 +25,9 @@ I need to add more details on how the conversions work, but basically we're conp
 For the form, we'll need :
 - mid-long text fields for move name, description, and miscelaneous effects
 - short text fields? for power, accuracy, and pp
-- dropdowns for type, move type,
+- dropdowns for type, and category,
 - two sections for random additional effects
-- check boxes for Same Type, 
+- check boxes for Same Type and increased crit
 
+The javascript needs to override default submition behavior, collect the inputs, and generate the field values for astral, printing them into the output area.
+CSS styling should ultimately work with the html to create 4 columns of form and
