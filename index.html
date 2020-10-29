@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Pokemon Move Coverter for Astral</title>
+  <meta name="description" content="Coverts Pokemon moves into Astral tabletop actions.">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <form>
+    <label for="mname">Move Name</label>
+    <input type="text" id="mname" name="mname"><br>
+    
+    <label for="desc">Description</label>
+    <input type="text" id="desc" name="desc"><br>
+    
+    <label for="misc">Miscellaneous Effects</label>
+    <input type="text" id="misc" name="misc"><br>
+    
+    <label for="power">Power</label>
+    <input type="number" id="power" name="power"><br>
+    
+    <label for="acc">Accuracy</label>
+    <input type="number" id="acc" name="acc"><br>
+    
+    <labe for="pp"l>PP</label>
+    <input type="number" id="pp" name="pp"><br>
+    
+    <label for="type">Type</label>
+    <select id="type" name="type">
+      <option value="fire">Fire</option>
+      <option value="grass">Grass</option>
+      <option value="water">Water</option>
+      <option value="electric">Electric</option>
+      <option value="normal">Normal</option>
+      <option value="fight">Fighting</option>
+      <option value="dark">Dark</option>
+      <option value="ghost">Ghost</option>
+      <option value="psychic">Psychic</option>
+      <option value="bug">Bug</option>
+      <option value="rock">Rock</option>
+      <option value="ground">Ground</option>
+      <option value="dragon">Dragon</option>
+      <option value="fairy">Fairy</option>
+      <option value="steel">Steel</option>
+      <option value="poison">Poison</option>
+      <option value="ice">Ice</option>
+    </select><br>
+    
+     <label for="cat">Category</label>
+    <select id="cat" name="cat">
+      <option value="physical">Physical</option>
+      <option value="special">Special</option>
+      <option value="status">Status</option>
+    </select><br>
+    
+    <div>
+      <label for="effect1">Effect 1</label>
+      <input type="text" id="effect1" name="effect1"><br>
+      <label for="prob1">Probability</label>
+      <input type="number" id="prob1" name="prob1"><br>
+    </div>
+    
+    <div>
+      <label for="effect1">Effect 2</label>
+      <input type="text" id="effect2" name="effect2"><br>
+      <label for="prob2">Probability</label>
+      <input type="number" id="prob2" name="prob2"><br>
+    </div>
+    
+    <label for="sametype">Same Type Advantage</label>
+    <input type="checkbox" id="sametype" name="sametype"><br>
+  </form>
+
+  <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</body>
+</html>
