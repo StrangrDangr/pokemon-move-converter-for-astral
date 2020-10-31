@@ -98,7 +98,7 @@ $(document).ready(function(){
            return " ";
         }
      };
-     var message= "\'Type: " + type "\'<br />" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br />___<br />```<br />" + desc + "<br />```" + mech1 + toHit + dmg + extra + ms;
+     var message= "\'Type: " + type + "\'<br />" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br />___<br />```<br />" + desc + "<br />```" + mech1 + toHit + dmg + extra + ms;
      $('#title').html(title);
      $('#display').html(display);
      $('#message').html(message);
