@@ -45,7 +45,6 @@ $(document).ready(function(){
      };
      function toHit(){
         if(acc>0){
-           console.log(crit);
            if(crit==false){
               return ">To Hit: {!(2d6) + " + acc + " + acc} - evasion vs. 12 <br>";
            }else{
