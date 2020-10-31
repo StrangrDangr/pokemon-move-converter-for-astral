@@ -72,7 +72,7 @@ $(document).ready(function(){
         }};
      function extra(){
         if (eff1 !=0){
-           let r1= "!!(1d10>" + (10-prob1 + ")<br>";
+           let r1= "!!(1d10>" + (10-prob1) + ")<br>";
            let e1= ">" + eff1 + "? ";
            if (eff2 !=0){
               let r2= "!!(1d10>" + (10-prob2) + ")<br>";
