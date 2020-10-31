@@ -40,7 +40,7 @@ $(document).ready(function(){
      var display= name + " - " + cat;
      var mech1= function(){
         let x="<br>"
-        unless($(targ)=="default" && $(pri)=="default"){
+        if($(targ)!="default" || $(pri)!="default"){
            if(pri != "default"){
               x += ">" + $(pri) + "<br>";
            };
