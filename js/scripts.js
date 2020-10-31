@@ -37,13 +37,13 @@ $(document).ready(function(){
      };
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
-     var first=pri;/*(function(){
+     function first(){
         var fl= "<br>";
         if(pri != "default"){fl += ">" + pri + "<br>"};
         if(targ != "default"){fl += ">" + targ + "<br>"};
         return fl;
-     });*/
-    var toHit=(function(){
+     };
+     function toHit(){
         if(acc>0){
            if($(crit)==false){
               return ">To Hit: {!(2d6) + " + acc + " + acc} - evasion vs. 12 <br>";
@@ -55,8 +55,8 @@ $(document).ready(function(){
         }else{
            return ">Auto success!<br>"
         };
-     });
-     var dmg= function(){
+     };
+     function dmg(){
         if(pow>0){
            let d= "!(1d4)" + convpow + " + " + cat;
            let e= "} vs " + defstat + ".<br>";
@@ -69,7 +69,7 @@ $(document).ready(function(){
         }else{
            return " ";
         }};
-     var extra= function(){
+     function extra(){
         if (eff1 !=0){
            let r1= "!!(1d10>" + (10-$(prob1)) + ")<br>";
            let e1= ">" + eff1 + "? ";
@@ -84,7 +84,7 @@ $(document).ready(function(){
            return " ";
         }
      };
-     var ms = function(){
+     function ms(){
         if(misc!=0){
            return ">" + misc;
         }else{
@@ -92,7 +92,7 @@ $(document).ready(function(){
         }
      };
      var message1= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```";
-     var message2= first + toHit + dmg + extra + ms;
+     var message2= first() + toHit() + dmg() + extra() + ms();
      $('#title').html(title);
      $('#display').html(display);
      $('#message1').html(message1);
