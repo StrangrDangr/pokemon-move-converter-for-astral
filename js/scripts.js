@@ -1,8 +1,8 @@
 $(document).ready(function(){
-   $( "#submit" ).submit(function( event ){
+   $( "#submit" ).click(function( event ){
     event.preventDefault();
     var name= $('#mname').val(),
-        desc= $('#desc').val(),
+        desc= $('#desc').html(),
         pow= Math.ceil($('#power').val() / 10),
         acc= Math.ceil($('#acc').val() / 10),
         pp= $('#pp').val(),
@@ -16,7 +16,7 @@ $(document).ready(function(){
         crit= $('#crit-rate').prop('checked'),
         targ= $("input[name='target']:checked").val(),
         pri= $("input[name='priority']:checked").val(),
-        misc= $('#misc").val();
+        misc= $('#misc").html();
      var convpow= function(){
            let x= pow-4;
            if (x==0){
