@@ -96,7 +96,7 @@ $(document).ready(function(){
      var message2= first + toHit + dmg + extra + ms;
      $('#title').html(title);
      $('#display').html(display);
-     $('#message').html(message1);
+     $('#message1').html(message1);
      $('#message2').html(message2);
    });
 })
