@@ -92,9 +92,11 @@ $(document).ready(function(){
            return " ";
         }
      };
-     var message= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```<br>" + (first + toHit + dmg + extra + ms);
+     var message1= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```";
+     var message2= first + toHit + dmg + extra + ms;
      $('#title').html(title);
      $('#display').html(display);
-     $('#message').html(message);
+     $('#message').html(message1);
+     $('#message2').html(message2);
    });
 })
