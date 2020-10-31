@@ -21,7 +21,7 @@ $(document).ready(function(){
            let x= pow-4;
            if (x==0){
               return " ";
-           }elseif(x>0){
+           }else if(x>0){
               return " + " + x;
            }else{
               return " - " + (x * (-1));
@@ -30,7 +30,7 @@ $(document).ready(function(){
      var defstat= function(){
         if (cat=="Atk"){
            return "Def";
-        }elseif(cat=="SpAtk"){
+        }else if(cat=="SpAtk"){
            return "Sp.Def";
         }else{
            return " ";
