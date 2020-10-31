@@ -38,11 +38,12 @@ $(document).ready(function(){
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
       
-     /*var first= (function() {var fl= "<br>";
+     var first= function(){
+        var fl= "<br>";
         if(pri != "default"){fl += ">" + pri + "<br>"};
         if(targ != "default"){fl += ">" + targ + "<br>"};
         return fl;
-     });*/
+     };
     var toHit= function(){
         if(acc>0){
            if($(crit)==false){
@@ -91,7 +92,7 @@ $(document).ready(function(){
            return " ";
         }
      };
-     var message= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```" + toHit + dmg + extra + ms;
+     var message= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```<br>" + (first + toHit + dmg + extra + ms);
      $('#title').html(title);
      $('#display').html(display);
      $('#message').html(message);
