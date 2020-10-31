@@ -38,14 +38,10 @@ $(document).ready(function(){
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
       
-     var first= (function() {var x= '<br>';
-        if(pri != "default"){
-           x += ">" + $(pri) + "<br>";
-        };
-        if(targ != "default"){
-           x += ">" + $(targ) + "<br>";
-        };
-        return x;
+     var first= (function() {var fl= "<br>";
+        if(pri != "default"){fl += ">" + pri + "<br>"};
+        if(targ != "default"){fl += ">" + targ + "<br>"};
+        return fl;
      });
      var toHit= function(){
         if(acc>0){
