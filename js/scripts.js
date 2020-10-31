@@ -1,6 +1,5 @@
 $(document).ready(function(){
-   $( "#submit" ).click(function( event ){
-    event.preventDefault();
+   $( "#submit" ).click(function(){
     var name= $('#mname').val(),
         desc= $('#desc').html(),
         pow= Math.ceil($('#power').val() / 10),
@@ -38,18 +37,18 @@ $(document).ready(function(){
      };
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
-     var mech1= function(){
-        let x="<br>"
-        if($(targ)!="default" || $(pri)!="default"){
+     var mech1 = (function(){
+        let x="<br>";
+        if($(targ) !="default" || $(pri) !="default"){
            if(pri != "default"){
               x += ">" + $(pri) + "<br>";
            };
-           if(targ!="default"){
+           if(targ != "default"){
               x += ">" + $(targ) + "<br>";
            };
         };
         return x;
-     };
+     });
      var toHit= function(){
         if(acc>0){
            if($(crit)==false){
