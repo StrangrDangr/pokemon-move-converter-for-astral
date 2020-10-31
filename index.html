@@ -17,7 +17,7 @@
     <input type="text" id="mname" name="mname"><br>
     
     <label for="desc">Description</label>
-    <input type="text" id="desc" name="desc"><br>
+    <textarea id="desc" rows="4"></textarea><br>
     
     <label for="power">Power</label>
     <input type="number" id="power" name="power"><br>
@@ -76,7 +76,7 @@
     <label for="crit-rate">Increased Crit Rate</label>
     <input type="checkbox" id="crit-rate" name="crit-rate"><br>
     
-    <label for="target">Target</label>
+    <h4>Target</h4>
     <input value="default" type="radio" id="default" name="target"><br>
     <label for="default">Default</label>
     <input value="all adjacent enemies" type="radio" id="adj-en" name="target"><br>
@@ -90,20 +90,20 @@
     <input value="all pokemon on the field" type="radio" id="all" name="target"><br>
     <label for="all">All</label>
     
-    <label for="target">Priority</label>
-    <input value="default" type="radio" id="default" name="priority"><br>
-    <label for="default">Default</label>
-    <input value="this move has priority" type="radio" id=" priority" name="priority"><br>
-    <label for=" priority">Priority</label>
-    <input value="this move has double priority" type="radio" id="priority2" name="priority"><br>
-    <label for="priority2">Priority 2</label>
-    <input value="this move goes last" type="radio" id="last" name="priority"><br>
-    <label for="last">Last</label>
+    <h4>Priority</h4>
+    <input value="default" type="radio" id="default" name="priority">
+    <label for="default">Default</label><br>
+    <input value="this move has priority" type="radio" id=" priority" name="priority">
+    <label for=" priority">Priority</label><br>
+    <input value="this move has double priority" type="radio" id="priority2" name="priority">
+    <label for="priority2">Priority 2</label><br>
+    <input value="this move goes last" type="radio" id="last" name="priority">
+    <label for="last">Last</label><br>
         
     <label for="misc">Miscellaneous Effects</label>
-    <input type="text" id="misc" name="misc"><br>
+    <textarea id="misc" name="misc"></textarea><br>
     
-    <input id="submit" type="submit" value="submit">
+    <input id="submit" type="button" value="button">
   </form>
   
   <div id="output" class="output">
