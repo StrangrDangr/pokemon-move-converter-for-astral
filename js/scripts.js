@@ -16,7 +16,7 @@ $(document).ready(function(){
         targ= $("input[name='target']:checked").val(),
         pri= $("input[name='priority']:checked").val(),
         misc= $('#misc').val();
-     var convpow= function(){
+     function convpow(){
            let x= pow-4;
            if (x==0){
               return " ";
@@ -26,7 +26,7 @@ $(document).ready(function(){
               return " - " + (x * (-1));
            };
         };
-     var defstat= function() {
+     function defstat() {
         if (cat=="Atk"){
            return "Def";
         }else if(cat=="SpAtk"){
@@ -58,9 +58,9 @@ $(document).ready(function(){
      };
      function dmg(){
         if(pow>0){
-           let d= "!(1d4)" + convpow + " + " + cat;
-           let e= "} vs " + defstat + ".<br>";
-           let c= ">Crit? + !!(1d4" + convpow + ") dmg.<br>";
+           let d= "!(1d4)" + convpow() + " + " + cat;
+           let e= "} vs " + defstat() + ".<br>";
+           let c= ">Crit? + !!(1d4" + convpow() + ") dmg.<br>";
            if(stab==false){
              return ">Damage: {" + d + e + c;
            }else{
