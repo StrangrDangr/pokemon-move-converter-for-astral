@@ -57,7 +57,7 @@ $(document).ready(function(){
            }else{
               return ">To Hit: !(2d6cr>10) + {acc + " + acc + "} - evasion vs. 12 <br>";
            };
-        }elseif(pow>0){
+        }else if(pow>0){
            return ">Auto success! !(2d6)<br>"
         }else{
            return ">Auto success!<br>"
