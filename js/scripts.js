@@ -26,19 +26,19 @@ $(document).ready(function(){
               return " - " + (x * (-1));
            };
         };
-     var defstat= function(){
+     var defstat= function() {
         if (cat=="Atk"){
            return "Def";
         }else if(cat=="SpAtk"){
            return "Sp.Def";
         }else{
            return " ";
-        }
+        };
      };
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
-     var mech1 = (function(){
-        const x= '<br>';
+      
+     var first= (function() {var x= '<br>';
         if(pri != "default"){
            x += ">" + $(pri) + "<br>";
         };
@@ -95,7 +95,7 @@ $(document).ready(function(){
            return " ";
         }
      };
-     var message= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```" + mech1 + toHit + dmg + extra + ms;
+     var message= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```" + first + toHit + dmg + extra + ms;
      $('#title').html(title);
      $('#display').html(display);
      $('#message').html(message);
