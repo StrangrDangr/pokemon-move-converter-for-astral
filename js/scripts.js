@@ -1,7 +1,7 @@
 $(document).ready(function(){
    $( "#submit" ).click(function(){
     var name= $('#mname').val(),
-        desc= $('#desc').html(),
+        desc= $('#desc').val(),
         pow= Math.ceil($('#power').val() / 10),
         acc= Math.ceil($('#acc').val() / 10),
         pp= $('#pp').val(),
@@ -15,7 +15,7 @@ $(document).ready(function(){
         crit= $('#crit-rate').prop('checked'),
         targ= $("input[name='target']:checked").val(),
         pri= $("input[name='priority']:checked").val(),
-        misc= $('#misc').html();
+        misc= $('#misc').val();
      var convpow= function(){
            let x= pow-4;
            if (x==0){
@@ -95,7 +95,7 @@ $(document).ready(function(){
            return " ";
         }
      };
-     var message= "\'Type: " + type + "\'<br />" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br />___<br />```<br />" + desc + "<br />```" + mech1 + toHit + dmg + extra + ms;
+     var message= "\'Type: " + type + "\'<br>" + pow + " Pow - " + acc + " Acc - " + pp + " pp<br>___<br>```<br>" + desc + "<br>```" + mech1 + toHit + dmg + extra + ms;
      $('#title').html(title);
      $('#display').html(display);
      $('#message').html(message);
