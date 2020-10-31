@@ -37,12 +37,12 @@ $(document).ready(function(){
      };
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
-     var first=(function(){
+     var first=pri;/*(function(){
         var fl= "<br>";
         if(pri != "default"){fl += ">" + pri + "<br>"};
         if(targ != "default"){fl += ">" + targ + "<br>"};
         return fl;
-     });
+     });*/
     var toHit=(function(){
         if(acc>0){
            if($(crit)==false){
