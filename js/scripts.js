@@ -38,14 +38,12 @@ $(document).ready(function(){
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
      var mech1 = (function(){
-        let x="<br>";
-        if($(targ) !="default" || $(pri) !="default"){
-           if(pri != "default"){
-              x += ">" + $(pri) + "<br>";
-           };
-           if(targ != "default"){
-              x += ">" + $(targ) + "<br>";
-           };
+        const x= '<br>';
+        if(pri != "default"){
+           x += ">" + $(pri) + "<br>";
+        };
+        if(targ != "default"){
+           x += ">" + $(targ) + "<br>";
         };
         return x;
      });
