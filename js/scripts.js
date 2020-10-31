@@ -16,7 +16,7 @@ $(document).ready(function(){
         crit= $('#crit-rate').prop('checked'),
         targ= $("input[name='target']:checked").val(),
         pri= $("input[name='priority']:checked").val(),
-        misc= $('#misc").html();
+        misc= $('#misc').html();
      var convpow= function(){
            let x= pow-4;
            if (x==0){
