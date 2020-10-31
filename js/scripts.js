@@ -44,7 +44,7 @@ $(document).ready(function(){
            if(pri != "default"){
               x += ">" + $(pri) + "<br>";
            };
-           If(targ!="default"){
+           if(targ!="default"){
               x += ">" + $(targ) + "<br>";
            };
         };
