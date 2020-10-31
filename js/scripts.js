@@ -37,13 +37,13 @@ $(document).ready(function(){
      };
      var title= "{name} uses " + name;
      var display= name + " - " + cat;
-     var first=function(){
+     var first=(function(){
         var fl= "<br>";
         if(pri != "default"){fl += ">" + pri + "<br>"};
         if(targ != "default"){fl += ">" + targ + "<br>"};
         return fl;
-     };
-    var toHit=function(){
+     });
+    var toHit=(function(){
         if(acc>0){
            if($(crit)==false){
               return ">To Hit: {!(2d6) + " + acc + " + acc} - evasion vs. 12 <br>";
@@ -55,7 +55,7 @@ $(document).ready(function(){
         }else{
            return ">Auto success!<br>"
         };
-     };
+     });
      var dmg= function(){
         if(pow>0){
            let d= "!(1d4)" + convpow + " + " + cat;
