@@ -30,23 +30,24 @@
     
     <label for="type">Type</label>
     <select id="type" name="type">
-      <option value="fire">Fire</option>
-      <option value="grass">Grass</option>
-      <option value="water">Water</option>
-      <option value="electric">Electric</option>
       <option value="normal">Normal</option>
-      <option value="fight">Fighting</option>
-      <option value="dark">Dark</option>
-      <option value="ghost">Ghost</option>
-      <option value="psychic">Psychic</option>
       <option value="bug">Bug</option>
-      <option value="rock">Rock</option>
-      <option value="ground">Ground</option>
+      <option value="dark">Dark</option>
       <option value="dragon">Dragon</option>
+      <option value="electric">Electric</option>
       <option value="fairy">Fairy</option>
-      <option value="steel">Steel</option>
-      <option value="poison">Poison</option>
+      <option value="fire">Fire</option>
+      <option value="fighting">Fighting</option>
+      <option value="flying">Flying</option>
+      <option value="ghost">Ghost</option>
+      <option value="grass">Grass</option>
+      <option value="ground">Ground</option>
       <option value="ice">Ice</option>
+      <option value="poison">Poison</option>
+      <option value="psychic">Psychic</option>
+      <option value="rock">Rock</option>
+      <option value="steel">Steel</option>
+      <option value="water">Water</option>
     </select><br>
     
      <label for="cat">Category</label>
@@ -76,7 +77,7 @@
     <label for="crit-rate">Increased Crit Rate</label>
     <input type="checkbox" id="crit-rate" name="crit-rate"><br>
     
-    <h4>Target</h4>
+    <p><b>Target</b></p>
     <input value="default" type="radio" id="default" name="target" checked>
     <label for="default">Default</label><br>
     <input value="all adjacent enemies" type="radio" id="adj-en" name="target">
@@ -103,12 +104,13 @@
     <label for="misc">Miscellaneous Effects</label><br>
     <textarea id="misc" name="misc" rows="4"></textarea><br>
     
-    <input id="submit" type="button" value="button">
+    <input id="submit" type="button" value="Convert">
   </form>
   
   <div id="output" class="output">
-    <div id="title"> </div>
-    <div id="display"> </div>
+    <p><b>Sheet Display:  </b></p><div id="display"> </div>
+    <p><b>Action Title:  </b></p><div id="title"> </div>
+    <p><b>Message Body:</b></p>
     <div id="message1"> </div>
     <div id="message2"> </div>
   </div>
