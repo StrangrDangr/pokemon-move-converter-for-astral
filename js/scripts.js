@@ -13,6 +13,7 @@ $(document).ready(function(){
         prob2= Math.ceil($('#prob2').val() / 10),
         stab= $('#sametype').prop('checked'),
         crit= $('#crit-rate').prop('checked'),
+        multi= $("input[name='multihit']:checked").val(),
         targ= $("input[name='target']:checked").val(),
         pri= $("input[name='priority']:checked").val(),
         misc= $('#misc').val();
@@ -41,6 +42,14 @@ $(document).ready(function(){
         var fl= "<br>";
         if(pri != "default"){fl += ">" + pri + "<br>"};
         if(targ != "default"){fl += ">" + targ + "<br>"};
+        if(multi != "default"){
+           fl += ">hits ";
+           if(multi == "hit2-5"){
+              fl += "!(1d4+1) times";
+           }else{
+              fl += multi.slice(3) + " times";
+           };
+         };
         return fl;
      };
      function toHit(){
@@ -58,14 +67,26 @@ $(document).ready(function(){
      };
      function dmg(){
         if(pow>0){
-           let d= "!(1d4)" + convpow() + " + " + cat;
-           let e= "} vs " + defstat() + ".<br>";
-           let c= ">Crit? + !!(1d4" + convpow() + ") dmg.<br>";
+           var d= "!(1d4)" + convpow() + " + " + cat;
+           var e= " vs " + defstat() + ".<br>";
+           var c= ">Crit? + !!(1d4" + convpow() + ") dmg.<br>";
+           
            if(stab==false){
-             return ">Damage: {" + d + e + c;
+             var f= ">Damage: {" + d + "}";
            }else{
-             return ">Damage(STAB): {floor(1.5 *(" + d + "))" + e + c;
-           }
+             var f= ">Damage(STAB): {floor(1.5 *(" + d + "))}";
+           };
+           if(multi == "default"){
+              return f + e + c;
+           }else if(multi == "hit2-5"){
+              return f + e + c + f + ", hit 2<br>" + f + ", hit 3<br>" + f + ", hit 3<br>" + f + ", hit 4<br>" + f + ", hit 5<br>";
+           }else{
+              var g= f + e + c + f + ", hit 2<br>"
+              if(multi == "hit3"){
+                 g += f + ", hit 3<br>;
+              };
+              return g;
+           };
         }else{
            return " ";
         }};
