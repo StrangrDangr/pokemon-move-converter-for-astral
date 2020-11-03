@@ -83,7 +83,7 @@ $(document).ready(function(){
            }else{
               var g= f + e + c + f + ", hit 2<br>"
               if(multi == "hit3"){
-                 g += f + ", hit 3<br>;
+                 g += f + ", hit 3<br>";
               };
               return g;
            };
