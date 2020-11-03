@@ -41,7 +41,7 @@ $(document).ready(function(){
      function first(){
         var fl= "<br>";
         if(pri != "default"){fl += ">" + pri + "<br>"};
-        if(targ != "default"){fl += ">" + targ + "<br>"};
+        if(targ != "default"){fl += ">targets " + targ + "<br>"};
         if(multi != "default"){
            fl += ">hits ";
            if(multi == "hit2-5"){
