@@ -20,8 +20,18 @@
   padding:5px;
 }
 #submit{
-  flex: 0 0 100%
+  flex: 0 0 100%;
+  padding:2px;
 }
 .flex30{
   flex:0 0 30%;
+  padding:2px;
+}
+.flex50{
+  flex:0 0 50%;
+  padding:2px;
+}
+.flex100{
+  flex:0 0 100%;
+  padding:2px;
 }
