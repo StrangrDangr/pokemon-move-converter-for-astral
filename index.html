@@ -15,106 +15,132 @@
   <div class="pagewrap">
     <div class="set">
       <form>
-        <label for="mname">Move Name</label>
-        <input type="text" id="mname" name="mname"><br>
-
-        <label for="desc">Description</label><br>
-        <textarea id="desc" rows="4"></textarea><br>
-
-        <label for="power">Power</label>
-        <input type="number" id="power" name="power"><br>
-
-        <label for="acc">Accuracy</label>
-        <input type="number" id="acc" name="acc"><br>
-
-        <label for="pp">PP</label>
-        <input type="number" id="pp" name="pp"><br>
-    
-        <label for="type">Type</label>
-        <select id="type" name="type">
-          <option value="normal">Normal</option>
-          <option value="bug">Bug</option>
-          <option value="dark">Dark</option>
-          <option value="dragon">Dragon</option>
-          <option value="electric">Electric</option>
-          <option value="fairy">Fairy</option>
-          <option value="fire">Fire</option>
-          <option value="fighting">Fighting</option>
-          <option value="flying">Flying</option>
-          <option value="ghost">Ghost</option>
-          <option value="grass">Grass</option>
-          <option value="ground">Ground</option>
-          <option value="ice">Ice</option>
-          <option value="poison">Poison</option>
-          <option value="psychic">Psychic</option>
-          <option value="rock">Rock</option>
-          <option value="steel">Steel</option>
-          <option value="water">Water</option>
-        </select><br>
-    
-       <label for="cat">Category</label>
-        <select id="cat" name="cat">
-          <option value="Atk">Physical</option>
-          <option value="SpAtk">Special</option>
-          <option value="Stat">Status</option>
-        </select><br>
-
+        <div>
+          <label for="mname">Move Name</label>
+          <input type="text" id="mname" name="mname">
+        </div>
+        
+        <div>
+          <label for="desc">Description</label>
+          <textarea id="desc" rows="4"></textarea>
+        </div>
+        
+        <div>
+          <label for="power">Power</label>
+          <input type="number" id="power" name="power">
+        </div>
+        
+        <div>
+          <label for="acc">Accuracy</label>
+          <input type="number" id="acc" name="acc">
+        </div>
+        
+        <div>
+          <label for="pp">PP</label>
+          <input type="number" id="pp" name="pp">
+        </div>
+        
+        <div>
+          <label for="type">Type</label>
+          <select id="type" name="type">
+            <option value="normal">Normal</option>
+            <option value="bug">Bug</option>
+            <option value="dark">Dark</option>
+            <option value="dragon">Dragon</option>
+            <option value="electric">Electric</option>
+            <option value="fairy">Fairy</option>
+            <option value="fire">Fire</option>
+            <option value="fighting">Fighting</option>
+            <option value="flying">Flying</option>
+            <option value="ghost">Ghost</option>
+            <option value="grass">Grass</option>
+            <option value="ground">Ground</option>
+            <option value="ice">Ice</option>
+            <option value="poison">Poison</option>
+            <option value="psychic">Psychic</option>
+            <option value="rock">Rock</option>
+            <option value="steel">Steel</option>
+            <option value="water">Water</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="cat">Category</label>
+          <select id="cat" name="cat">
+            <option value="Atk">Physical</option>
+            <option value="SpAtk">Special</option>
+            <option value="Stat">Status</option>
+          </select>
+        </div>
+        
         <div>
           <label for="effect1">Effect 1</label>
           <input type="text" id="effect1" name="effect1"><br>
           <label for="prob1">Probability</label>
-          <input type="number" id="prob1" name="prob1"><br>
+          <input type="number" id="prob1" name="prob1">
         </div>
     
         <div>
           <label for="effect2">Effect 2</label>
           <input type="text" id="effect2" name="effect2"><br>
           <label for="prob2">Probability</label>
-          <input type="number" id="prob2" name="prob2"><br>
+          <input type="number" id="prob2" name="prob2">
+        </div>
+        
+        <div>
+          <label for="sametype">Same Type Advantage</label>
+          <input type="checkbox" id="sametype" name="sametype">
+        </div>
+        
+        <div>
+          <label for="crit-rate">Increased Crit Rate</label>
+          <input type="checkbox" id="crit-rate" name="crit-rate">
+        </div>
+        
+        <div>
+        <h4>Multi Hit?</h4>
+          <input value="default" type="radio" id="default" name="multihit" checked>
+          <label for="default">No</label><br>
+          <input value="hit2-5" type="radio" id="hit2-5" name="multihit">
+          <label for="hit2-5">2-5 times</label><br>
+          <input value="hit2" type="radio" id="hit2" name="multihit">
+          <label for="hit2">2 times</label><br>
+          <input value="hit3" type="radio" id="hit3" name="multihit">
+          <label for="hit3">3 times</label>
+        </div>
+        
+        <div>
+        <h4>Target</h4>
+          <input value="default" type="radio" id="default" name="target" checked>
+          <label for="default">Default</label><br>
+          <input value="all adjacent enemies" type="radio" id="adj-en" name="target">
+          <label for="adj-en">Adjacent Enemies</label><br>
+          <input value="all enemies" type="radio" id="all-en" name="target">
+          <label for="all-en">All Enemies</label><br>
+          <input value="all adjacent pokemon" type="radio" id="all-adj" name="target">
+          <label for="all-adj">All Adjacent</label><br>
+          <input value="all allies" type="radio" id="all-all" name="target">
+          <label for="all-all">All Allies</label><br>
+          <input value="all pokemon on the field" type="radio" id="all" name="target">
+          <label for="all">All</label>
         </div>
 
-        <label for="sametype">Same Type Advantage</label>
-        <input type="checkbox" id="sametype" name="sametype"><br>
+        <div>
+          <h4>Priority</h4>
+          <input value="default" type="radio" id="default" name="priority" checked>
+          <label for="default">Default</label><br>
+          <input value="this move has priority" type="radio" id=" priority" name="priority">
+          <label for=" priority">Priority</label><br>
+          <input value="this move has double priority" type="radio" id="priority2" name="priority">
+          <label for="priority2">Priority 2</label><br>
+          <input value="this move goes last" type="radio" id="last" name="priority">
+          <label for="last">Last</label>
+        </div>
 
-        <label for="crit-rate">Increased Crit Rate</label>
-        <input type="checkbox" id="crit-rate" name="crit-rate"><br>
-
-        <p><b>Multi Hit?</b></p>
-        <input value="default" type="radio" id="default" name="multihit" checked>
-        <label for="default">No</label><br>
-        <input value="hit2-5" type="radio" id="hit2-5" name="multihit">
-        <label for="hit2-5">2-5 times</label><br>
-        <input value="hit2" type="radio" id="hit2" name="multihit">
-        <label for="hit2">2 times</label><br>
-        <input value="hit3" type="radio" id="hit3" name="multihit">
-        <label for="hit3">3 times</label><br>
-    
-        <p><b>Target</b></p>
-        <input value="default" type="radio" id="default" name="target" checked>
-        <label for="default">Default</label><br>
-        <input value="all adjacent enemies" type="radio" id="adj-en" name="target">
-        <label for="adj-en">Adjacent Enemies</label><br>
-        <input value="all enemies" type="radio" id="all-en" name="target">
-        <label for="all-en">All Enemies</label><br>
-        <input value="all adjacent pokemon" type="radio" id="all-adj" name="target">
-        <label for="all-adj">All Adjacent</label><br>
-        <input value="all allies" type="radio" id="all-all" name="target">
-        <label for="all-all">All Allies</label><br>
-        <input value="all pokemon on the field" type="radio" id="all" name="target">
-        <label for="all">All</label><br>
-
-        <h4>Priority</h4>
-        <input value="default" type="radio" id="default" name="priority" checked>
-        <label for="default">Default</label><br>
-        <input value="this move has priority" type="radio" id=" priority" name="priority">
-        <label for=" priority">Priority</label><br>
-        <input value="this move has double priority" type="radio" id="priority2" name="priority">
-        <label for="priority2">Priority 2</label><br>
-        <input value="this move goes last" type="radio" id="last" name="priority">
-        <label for="last">Last</label><br>
-
-        <label for="misc">Miscellaneous Effects</label><br>
-        <textarea id="misc" name="misc" rows="4"></textarea><br>
+        <div>
+          <label for="misc">Miscellaneous Effects</label><br>
+          <textarea id="misc" name="misc" rows="4"></textarea>
+        </div>
 
         <input id="submit" type="button" value="Convert">
       </form>
