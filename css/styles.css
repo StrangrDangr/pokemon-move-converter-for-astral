@@ -22,3 +22,6 @@
 #submit{
   flex: 0 0 100%
 }
+.flex30{
+  flex:0 0 30%;
+}
